@@ -1,1 +1,1 @@
-# https://bekam-dev.github.io
+# static web clinic bekam
