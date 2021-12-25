@@ -1500,4 +1500,28 @@ a:focus {
   opacity: 1;
 }
 
+
+
+/*readmore css*/
+
+#morelink {
+  color: #0254EB
+}
+#morelink:visited {
+  color: #0254EB
+}
+.comment {
+  /*width: 400px;
+  background-color: #f0f0f0;
+  margin: 10px;*/
+}
+a.morelink {
+  text-decoration:none;
+  outline: none;
+}
+.morecontent span {
+  display: none;
+
+}
+
 /*# sourceMappingURL=maps/style.css.map */
