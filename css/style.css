@@ -41,7 +41,7 @@ h3, .h3 {
 
 h4, .h4 {
   font-size: 1.3rem;
-  line-height: 30px;
+  line-height: 25px;
 }
 
 h5, .h5 {
@@ -295,7 +295,7 @@ a {
 }
 
 a:focus, a:hover {
-  color: #e12454;
+  /*color: #e12454;*/
   text-decoration: none;
 }
 
@@ -664,7 +664,7 @@ a:focus {
 }
 
 .service {
-  padding-top: 180px;
+ /* padding-top: 180px;*/
 }
 
 .service .service-item {
@@ -1510,11 +1510,7 @@ a:focus {
 #morelink:visited {
   color: #0254EB
 }
-.comment {
-  /*width: 400px;
-  background-color: #f0f0f0;
-  margin: 10px;*/
-}
+
 a.morelink {
   text-decoration:none;
   outline: none;
