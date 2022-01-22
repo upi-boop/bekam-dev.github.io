@@ -137,7 +137,7 @@
         </div>
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12">
-                <form id="contact-form" class="contact__form " method="post" action="mail.php">
+                <form id="contactform" class="contact__form " method="post" data-netlify="true" action="mail.php">
                  <!-- form message -->
                     <div class="row">
                         <div class="col-12">
@@ -176,7 +176,7 @@
                     </div>
 
                     <div class="text-center">
-                        <input class="btn btn-main btn-round-full" name="submit" type="submit" value="Kirim"></input>
+                        <input class="btn btn-main btn-round-full" onclick="handleSubmit()" name="submit" type="submit" value="Kirim"></input>
                     </div>
                 </form>
             </div>
@@ -284,7 +284,31 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkeLMlsiwzp6b3Gnaxd86lvakimwGA6UA&callback=initMap"></script>    
     
     <script src="js/script.js"></script>
-    <script src="js/contact.js"></script>
+   <!--  <script src="js/contact.js"></script> -->
+
+    <script type="text/javascript">
+    	  
+    //document.querySelector("form").addEventListener("submit", handleSubmit);
+
+    function sendEmail() {
+    
+	    const handleSubmit = (e) => {
+		  e.preventDefault();
+		  //let myForm = document.getElementById("name");
+		  let formData = new FormData($("#contactform")[0]);
+		  //let formData = new FormData(myForm);
+		  fetch("/mail.php", {
+		    method: "POST",
+		    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+		    body: new URLSearchParams(formData).toString(),
+		  })
+		    .then(() => console.log("Form successfully submitted"))
+		    .catch((error) => alert(error));
+		};
+    }
+	
+
+    </script>
 
   </body>
   </html>
