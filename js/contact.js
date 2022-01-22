@@ -27,10 +27,10 @@
     form.submit(function (e) {
         e.preventDefault();
         form_data = $(this).serialize();
-        console.log(form_data)
+        console.log(form.attr('action'))
         $.ajax({
             type: 'POST',
-            url: '/mail.php',
+            url: form.attr('action'),
             data: form_data
         })
         .done(done_func)
