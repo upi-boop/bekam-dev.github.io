@@ -30,7 +30,7 @@
         console.log(form.attr('action'))
         $.ajax({
             type: 'POST',
-            url: form.attr('action'),
+            url: 'mail.php',
             data: form_data
         })
         .done(done_func)
