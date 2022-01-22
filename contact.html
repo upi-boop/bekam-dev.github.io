@@ -297,7 +297,7 @@
 		  //let myForm = document.getElementById("name");
 		  let formData = new FormData($("#contactform")[0]);
 		  //let formData = new FormData(myForm);
-		  fetch("/mail.php", {
+		  fetch("mail.php", {
 		    method: "POST",
 		    headers: { "Content-Type": "application/x-www-form-urlencoded" },
 		    body: new URLSearchParams(formData).toString(),
